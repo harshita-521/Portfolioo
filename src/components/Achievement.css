@@ -1,0 +1,76 @@
+.achList {
+  display: flex;
+  flex-direction: column;
+}
+
+.achRow {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  padding: 36px 0;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .achRow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.achType {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--textMuted);
+  padding-top: 5px;
+  line-height: 1.5;
+}
+
+.achContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.achTitle {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: var(--textPrimary);
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.achDesc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--textSecondary);
+  max-width: 560px;
+}
+
+.achLinks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.achLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--textMuted);
+  text-decoration: none;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.achLink:hover {
+  color: var(--accentLight);
+  border-color: var(--borderHover);
+}

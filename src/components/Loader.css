@@ -1,0 +1,102 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: loaderFadeOut 0.5s ease 2.5s forwards;
+}
+
+@keyframes loaderFadeOut {
+  to { opacity: 0; pointer-events: none; }
+}
+
+.loaderWindow {
+  width: min(420px, 88vw);
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
+  animation: loaderWindowIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes loaderWindowIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+.loaderTitleBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 14px;
+  background: #141414;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.loaderDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.loaderDotRed    { background: #ff5f57; }
+.loaderDotYellow { background: #febc2e; }
+.loaderDotGreen  { background: #28c840; }
+
+.loaderWindowTitle {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: #444;
+  margin-left: 6px;
+  letter-spacing: 0.3px;
+}
+
+.loaderBody {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.loaderLine {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  white-space: pre;
+  opacity: 0;
+  transform: translateY(4px);
+  animation: lineReveal 0.25s ease forwards;
+}
+
+@keyframes lineReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loaderMuted  { color: #555; }
+.loaderAccent { color: #888; }
+.loaderGreen  { color: #34d399; }
+.loaderPurple { color: #a78bfa; font-weight: 600; }
+
+.loaderCursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: #7c3aed;
+  border-radius: 1px;
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: cursorBlink 0.9s step-end infinite;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+@keyframes cursorBlink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0; }
+}

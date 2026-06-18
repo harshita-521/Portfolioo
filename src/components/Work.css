@@ -1,0 +1,198 @@
+.workProjectList {
+  margin-bottom: 72px;
+}
+
+.workProjectRow {
+  display: grid;
+  grid-template-columns: 56px 1fr 24px;
+  gap: 24px;
+  padding: 28px 0;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: opacity 0.2s;
+}
+
+.workProjectRow:hover .workProjectName {
+  color: var(--accentLight);
+}
+
+.workProjectRowOpen .workProjectNum {
+  color: var(--accentLight);
+}
+
+@media (max-width: 600px) {
+  .workProjectRow {
+    grid-template-columns: 40px 1fr 20px;
+    gap: 14px;
+  }
+}
+
+.workProjectNum {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--textMuted);
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.workProjectMain {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workProjectName {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: var(--textPrimary);
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+  transition: color 0.2s;
+}
+
+.workProjectTechList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.workProjectChevron {
+  font-size: 14px;
+  color: var(--textMuted);
+  transition: transform 0.3s ease, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workProjectChevronOpen {
+  transform: rotate(180deg);
+  color: var(--accentLight);
+}
+
+.workProjectExpand {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.workProjectExpandOpen {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.workProjectExpandInner {
+  padding: 0 0 28px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .workProjectExpandInner {
+    padding-left: 54px;
+  }
+}
+
+.workProjectDesc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--textSecondary);
+  max-width: 600px;
+}
+
+.workProjectLink {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--textMuted);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  align-self: flex-start;
+  white-space: nowrap;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.workProjectLink:hover {
+  color: var(--accentLight);
+  border-color: var(--borderHover);
+}
+
+.workBlock {
+  margin-bottom: 56px;
+}
+
+.workBlockTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--textMuted);
+  margin-bottom: 20px;
+}
+
+.workAchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.workAchCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.workAchTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--textSecondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.workAchResult {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--textPrimary);
+  margin-top: 2px;
+}
+
+.workAchDetail {
+  font-size: 12px;
+  color: var(--textMuted);
+  margin-top: 4px;
+}
+
+.workLeadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+
+.workLeadCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.workLeadRole {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--textPrimary);
+}
+
+.workLeadDesc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--textSecondary);
+}

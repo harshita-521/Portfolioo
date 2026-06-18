@@ -1,0 +1,84 @@
+.navbar {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  background: var(--bgNav);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid var(--bgNavBorder);
+  border-radius: 50px;
+  padding: 5px 8px;
+  z-index: 100;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.02),
+    0 16px 48px rgba(0, 0, 0, 0.65);
+  animation: navSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+@keyframes navSlideUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 7px 13px;
+  border: none;
+  background: transparent;
+  color: var(--textMuted);
+  border-radius: 40px;
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.navItem:hover {
+  color: var(--textSecondary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.navItemActive {
+  color: #fff !important;
+  background: var(--accent) !important;
+}
+
+.navItemResume {
+  color: var(--accentLight);
+}
+
+.navItemResume:hover {
+  color: #fff;
+  background: rgba(124, 58, 237, 0.18);
+}
+
+.navLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.navDivider {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 520px) {
+  .navLabel {
+    display: none;
+  }
+  .navItem {
+    padding: 10px 11px;
+  }
+}

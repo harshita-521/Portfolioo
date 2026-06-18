@@ -1,0 +1,207 @@
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 52px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 680px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}
+
+.aboutDescription {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--textSecondary);
+  margin-bottom: 36px;
+}
+
+.aboutSubLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--textMuted);
+  margin-bottom: 14px;
+}
+
+.aboutExpCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aboutExpTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.aboutExpCompany {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--textPrimary);
+}
+
+.aboutExpRole {
+  font-size: 13px;
+  color: var(--textSecondary);
+  margin-top: 3px;
+}
+
+.aboutExpRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.aboutExpDuration {
+  font-size: 12px;
+  color: var(--textMuted);
+}
+
+.aboutExpBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.aboutExpDesc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--textSecondary);
+}
+
+.aboutEduList {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutEduRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.aboutEduRow:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.aboutEduLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.aboutEduSchool {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--textPrimary);
+  line-height: 1.4;
+}
+
+.aboutEduDegree {
+  font-size: 12px;
+  color: var(--textMuted);
+}
+
+.aboutEduRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.aboutEduYear {
+  font-size: 11px;
+  color: var(--textMuted);
+}
+
+.aboutEduGrade {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.aboutEduGradeNum {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--textPrimary);
+  letter-spacing: -0.3px;
+}
+
+.aboutEduGradeLabel {
+  font-size: 10px;
+  color: var(--textMuted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.aboutStats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 0;
+}
+
+.aboutStatItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 24px;
+  text-decoration: none;
+  transition: background var(--transition);
+  flex: 1;
+  min-width: 80px;
+}
+
+.aboutStatItem:hover {
+  background: var(--bgCard);
+  border-radius: 8px;
+}
+
+.aboutStatVal {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.aboutStatLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--textMuted);
+}
+
+.aboutStatSep {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .aboutStatItem {
+    padding: 12px 16px;
+  }
+  .aboutStatVal {
+    font-size: 16px;
+  }
+}
