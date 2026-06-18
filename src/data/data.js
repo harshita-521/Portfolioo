@@ -137,10 +137,16 @@ export const experience = {
       experienceRole: "Software Development Engineer Intern",
       experienceDuration: "May - July 2026",
       experiencePoints: [
-        "Worked on production-grade engineering problems at one of India's largest e-commerce platforms",
-        "Collaborated with senior engineers on real-world system design and platform challenges",
-        "Delivered features end-to-end, from design to deployment in a high-traffic environment",
-      ],
+"Built an automated Grafana dashboard generator using rule-based SOPs and metrics scraping, supporting 15K–20K+ metrics per application and significantly reducing manual dashboard provisioning effort.",
+
+"Led database decoupling in the validation service, preserving analytical API behavior while eliminating cross-service bottlenecks and substantially reducing database CPU utilization.",
+
+"Resolved a production metrics regression in pricing-storm supervisors by migrating Cosmos JMX configurations to version-controlled confd templates, improving metrics reliability by 97.3%.",
+
+"Automated end-to-end storm host-populator setup through Debian packaging and capacity-planner templates, eliminating YAK connectivity issues across supervisors and reducing node latency by 33%.",
+
+"Contributed to the migration of internal data pipelines from the staging environment to the end-to-end (E2E) instance."
+],
     },
   ],
 }
