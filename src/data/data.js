@@ -30,7 +30,7 @@ export const home = {
   homeGithub: "https://github.com/harshita-521",       
   homeLinkedin: "https://linkedin.com/in/harshita-gautam-b84503320", 
   homeEmail: "harshita200525@gmail.com",
-  homeResumeLink: "YOUR_GOOGLE_DRIVE_LINK_HERE",
+  homeResumeLink: "https://drive.google.com/file/d/1BySScgOWAUvXDmhusjTpV3r3QogdxmvK/view?usp=drive_link",
 }
 
 
